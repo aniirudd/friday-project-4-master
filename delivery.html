@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <title>Pizza Order</title>
+  </head>
+  <body>
+ 
+    <div class="container">
+      <div class="jumbotron">
+        <a href="index.html"> <h1>Beachfront Pizza</h1> </a>
+        <h4>Online Delivery Service</h4>
+      </div>
+      <div class="row">
+        <form id="formInput">
+          <div id="jumbotron1">
+            <h4>Our sizing and topping options:</h4>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="well">
+              <div class="thumbnail">
+                <img src="img/smallpizza.jpg" alt="Small Pizza">
+                <div class="caption">
+                  <h2>Small Pizza</h2>
+                  <p>Our small pizzas have 8 slices and will definitely satisfy one person. It's going to be a little 'iffy' for 2 though.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="well">
+              <div class="thumbnail">
+                <img src="img/mediumpizza.jpg" alt="Medium Pizza">
+                <div class="caption">
+                  <h2>Medium Pizza</h2>
+                  <p>Our medium pizzas have 16 slices and will definitely satisfy 2 if not 3 people. 16 slices is a lot of pizza for 2.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="well">
+              <div class="thumbnail">
+                <img src="img/largepizza.jpg" alt="Large Pizza">
+                <div class="caption">
+                  <h2>Large Pizza</h2>
+                  <p>This glorious monster pizza will feed 3+ hungry humans, it has 16 slices like our medium pizza but they are larger slices.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="well">
+              <div class="thumbnail">
+                <img src="img/pizza1.jpg" alt="VegetarianPizza">
+                <div class="caption">
+                  <h2>Veggie Pizza</h2>
+                  <p>Here is our veggie pizza, loaded with green bell peppers, onions, black olives and local mushrooms. Oh and did we mention it's gluten free, vegan and non-dairy cheese. (It's the best!)</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="well">
+              <div class="thumbnail">
+                <img src="img/pizza2.jpg" alt="Mutton Pizza">
+                <div class="caption">
+                  <h2>Mutton Pizza</h2>
+                  <p>Our mutton pizza has tomato sauce, a ton of cheese, and it's loaded with mutton.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div class="well">
+              <div class="thumbnail">
+                <img src="img/pizza3.jpg" alt="Pepperoni Pizza">
+                <div class="caption">
+                  <h2>Pepperoni Pizza</h2>
+                  <p>This isn't your average pepperoni pizza, this one is better.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="well">
+              <div class="form-group">
+                <label>Select Pizza Size</label>
+                <select class="form-control" id="pSize">
+                  <option id="small">Small</option>
+                  <option id="medium">Medium</option>
+                  <option id="large">Large</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="well">
+              <div class="form-group">
+                <label>Select Pizza Toppings</label>
+                <select class="form-control" id="toppings">
+                  <option id="mutton">Mutton</option>
+                  <option id="pep">Pepperoni</option>
+                  <option id="veggie">Vegetarian</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Place your order</button>
+        </form>
+        <div class="col-md-5" id="orderConfirmation">
+          <div class="well">
+            <h3>Thank you for ordering from Beachfront Pizza! Here is your order confirmation:</h3>
+            <ul id="list"></ul>
+            <input type="button" value="Back" class="btn btn-primary"onClick="window.location.reload()">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

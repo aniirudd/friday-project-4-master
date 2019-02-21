@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="js/scripts.js"></script>
+	
+	<style>
+      /* Set the size of the div element that contains the map */
+       #map {
+        height: 400px;  /* The height is 400 pixels */
+        width: 100%;  /* The width is the width of the web page */
+       }
+    </style>
+	
+    <title>Pizza Order</title>
+  </head>
+  <body>
+    
+	<script> 
+      // Initialize and add the map
+      function initMap() {
+      // The location of Uluru
+      var uluru = {lat: 28.562164, lng: 77.212635};
+      // The map, centered at Uluru
+      var map = new google.maps.Map(
+           document.getElementById('map'), {zoom: 15, center: uluru});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB3tO4SQlk9ZVpuhRXlmNfYh37e63-Li2k&callback=initMap">
+    </script>
+  
+ 
+    <div class="container">
+      <div class="jumbotron">
+        <a href="index.html"> <h1>Beachfront Pizza</h1> </a>
+      </div>
+	  <form id="formInput">
+          <div id="jumbotron1">
+            <h4>Contact</h4>
+			</div>
+			</form>
+			
+          <div class="col-sm-6 col-md-5">
+            <div class="well">
+
+	          <fieldset class="pure-group">    
+	             <input style= "color:black;" type="text" name="name" placeholder="Name" size="60">
+              </fieldset>
+
+	          <fieldset class="pure-group">	
+                 <input style= "color:black;" type="email" name="email" placeholder="E-mail" size="60"> 
+	              <span class="email-invalid" style="display:none">
+                    Must be a valid email address</span>
+              </fieldset>
+            
+	          <fieldset class="pure-group">		
+			     <textarea style= "color:black;" id="message" name="message" rows="15"  
+			       placeholder="Your message..." cols="50" ></textarea>
+              </fieldset>
+            
+	          <fieldset class="pure-group">		
+			     <input style= "color:black;" type="submit" id="sub2" value="Send">
+	          </fieldset>		
+  
+            </div>
+           </div>
+		   
+			    
+           <div class="col-sm-6 col-md-7">
+             
+			 <div class="well">
+			    <h2 style= "color:white;">Our Location</h2>
+                  <!--The div element for the map -->
+                  <div id="map"></div>
+             </div>
+		   </div>
+
+			
+    </div>
+  </body>
+</html>
